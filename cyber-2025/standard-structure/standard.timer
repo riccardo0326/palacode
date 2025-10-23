@@ -1,0 +1,17 @@
+# first and last name: Riccardo Palazzi
+# student id: 187432
+# 
+# path: ~/.config/systemd/user/standard-structure
+#
+# command to enable the timer: systemctl --user enable standard-structure.timer
+# command to start the timer: systemctl --user start standard-structure.timer
+
+[Unit]
+Description=standard structure timer
+
+[Timer]
+Unit=standard-structure.timer
+OnCalendar=Giorno1,Giorno2 *-*-* hh:mm
+
+[Install]
+WantedBy=timers.target

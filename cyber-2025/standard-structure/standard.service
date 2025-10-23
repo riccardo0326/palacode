@@ -1,0 +1,13 @@
+# first and last name: Riccardo Palazzi
+# student id: 187432
+#
+# path: ~/.config/systemd/user/standard.service
+
+[Unit]
+Description=standard structure file
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+WorkingDirectory=%h/standard-structure
+ExecStart=/usr/bin/python3 app.py --arg1 ....  --arg2 .... 
+
